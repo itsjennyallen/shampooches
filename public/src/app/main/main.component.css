@@ -1,0 +1,29 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+    position: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th, td {
+    padding: 15px;
+
+  }
+  h2{
+    position: center;
+  }
+  /* body, html, .test{
+    cursor: url(eeveepaw.png), auto;
+  } */
+  body{
+    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/04/15/background-with-dog-paw-print-and-bone-vector-1360415.jpg");
+    height:auto;
+    width:auto;
+    padding: 75px;
+  }
+
+
+
+ 

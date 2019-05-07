@@ -1,0 +1,23 @@
+<body>
+  <h2>Edit this pet</h2>
+  <p *ngFor="let e of errors">{{e}}</p>
+
+
+  <form *ngIf = "editPet" (submit) = "updatePet()">
+  <p>Pet name: <input type="text" name="editPet.name" [(ngModel)]="editPet.name"></p>
+  <p>Breed: <input type="text" name = "editPet.breed" [(ngModel)]="editPet.breed"></p>
+  <p>Services: <input type="text" name = "editPet.service" [(ngModel)]="editPet.service"></p>
+  <p>Notes:<input type="text" name = "editPet.notes" [(ngModel)]="editPet.notes"> </p>
+  <!-- <p>Skills:</p>
+  <p>Skill One: <input type="text" name = "editPet.skillOne" [(ngModel)]="editPet.skillOne"></p>
+  <p>Skill Two: <input type="text" name = "editPet.skillTwo" [(ngModel)]="editPet.skillTwo"></p>
+  <p>Skill Three: <input type="text" name = "editPet.skillThree" [(ngModel)]="editPet.skillThree"></p> -->
+  <input type="submit" value="submit">
+  </form>
+
+
+
+
+
+  <button [routerLink]="['/pets']">Cancel</button>
+</body>

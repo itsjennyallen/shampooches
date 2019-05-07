@@ -1,0 +1,20 @@
+<body>
+  
+
+  <div *ngIf="pet">
+    
+    <h2>Details of {{pet.name}} </h2>
+    <h5>Breed: {{pet.breed}}</h5>
+    <h5>Service: {{pet.service}}</h5>
+    <h5>Notes: {{pet.notes}}</h5>
+
+  
+
+
+
+
+    <button (click)="delete(pet._id)">Completed!</button>
+    <button [routerLink]="['/pets']">Home</button> 
+  </div>
+</body>
+

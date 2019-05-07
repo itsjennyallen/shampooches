@@ -1,0 +1,24 @@
+<body>
+  <h1>Add your pet here! </h1>
+
+  <p *ngFor="let e of errors">{{e}}</p>
+
+
+  <form (submit)="addPet()">
+  
+    <p>Pet Name:<input type="text" name="newPet.name" [(ngModel)]="newPet.name"></p>
+    <p>Pet Breed/Type: <input type="text" name="newPet.breed" [(ngModel)]="newPet.breed"></p>
+    <p>Service: <input type="text" name="newPet.service" [(ngModel)]="newPet.service"></p>
+    <p>Notes: <input type="text" name="newPet.notes" [(ngModel)]="newPet.notes"></p>
+    <input type="submit" value="Add pet">
+
+    
+  </form>
+  <button [routerLink]="['/pets']">Home</button> 
+</body>
+
+
+
+
+
+

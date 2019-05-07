@@ -1,0 +1,31 @@
+<body>
+    <h1>Welcome to Shampooches {{currUser.firstName}}! </h1>
+  
+
+<button [routerLink]="['/pets/new']">Add new animal here</button> |  
+<button [routerLink]="['/']">Logout</button> 
+
+
+<p></p>
+<h2>All Animals Here</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Breed</th>
+        <th>Service</th>
+        <th>Actions</th>
+        
+    </tr>
+    <tr *ngFor = "let p of allPets">
+        <td>{{p.name}}</td>
+        <td>{{p.breed}}</td>
+        <td>{{p.service}}</td>
+        <td><button [routerLink]="['/pets', p._id]">details</button> | 
+        <button [routerLink]="['/pets/edit', p._id]">edit</button></td>
+    </tr>
+</table>
+
+
+</body>
+
+

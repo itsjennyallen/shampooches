@@ -1,0 +1,53 @@
+
+
+
+  <h1>Welcome to Shampooches!</h1>
+<fieldset>
+
+  <h2>Register</h2>
+<p *ngFor="let e of errors">{{e}}</p>
+
+<form (submit)='register()'method ='POST'>
+  <p>
+    <label>First Name:</label>
+    <input type="firstName" name="newUser.firstName" [(ngModel)]='newUser.firstName'>
+  </p>
+  <p>
+      <label>Last Name:</label>
+      <input type="lastName" name="newUser.lastName" [(ngModel)]='newUser.lastName'>
+    </p>
+  <p>
+    <label>Email:</label>
+    <input type="email" name='newUser.email' [(ngModel)]='newUser.email'>
+  </p>
+  <p>
+    <label>Password:</label>
+    <input type="password" name='newUser.password' [(ngModel)]='newUser.password'>
+  </p>
+  <p>
+    <label>Confirm Password:</label>
+    <input type="password" name='newUser.passwordConfirmation' [(ngModel)]='newUser.passwordConfirmation'>
+  </p>
+  <input type="submit" name="Register">
+
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+  
+</form>
+</fieldset> 
+<hr>
+<fieldset>
+<h2>Login</h2>
+<form (submit)='login()' method='POST'>
+  <p>
+    <label>Email:</label>
+    <input type="email" name='loginUser.email' [(ngModel)]='loginUser.email'>
+  </p>
+  <p>
+    <label>Password:</label>
+    <input type="password" name='loginUser.password' [(ngModel)]='loginUser.password'>
+  </p>
+  <input type="submit" name="Login">
+</form>
+</fieldset>
+
+
